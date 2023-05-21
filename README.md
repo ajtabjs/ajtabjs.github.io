@@ -1,2 +1,4 @@
-# ajtabjs.github.io
-main site
+# ajtalksaboutstuff.dev
+The repository that holds my main site.
+
+
