@@ -11,6 +11,17 @@ background-color:#24292e;
 
 }
 
+.intro-fade-in { animation: fadeIn 3s; }
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+
+
+
 #title{
 font-size:5vw;
 text-align:center;
