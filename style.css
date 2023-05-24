@@ -11,7 +11,11 @@ background-color:#24292e;
 
 }
 
-.intro-fade-in { animation: fadeIn 5s; }
+.intro-fade-in { 
+
+animation: fadeIn 5s; 
+
+}
 
 @keyframes fadeIn {
   0% { opacity: 0; }
