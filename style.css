@@ -1,0 +1,19 @@
+
+h1,h2,h3,h4,h5,h6{ /* for all titles */
+    font-family: "Plus Jakarta Sans", "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 110%;
+    color: #f4f4f4;
+}
+
+body {
+background-color:#24292e;
+
+
+}
+
+#title{
+font-size:5vw;
+text-align:center;
+
+}
+
