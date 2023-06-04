@@ -7,7 +7,7 @@ h1,h2,h3,h4,h5,h6{ /* for all titles */
 
 body {
 background-color:#24292e;
-
+  font-family: "Plus Jakarta Sans", "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
 
 }
 
@@ -22,7 +22,31 @@ animation: fadeIn 5s;
   100% { opacity: 1; }
 }
 
-
+  /* CSS for the navigation bar */
+    .navbar {
+      background-color: #2d3339;
+      overflow: hidden;
+    }
+    
+    /* CSS for the navigation links */
+    .navbar a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    /* CSS for the social media icons */
+    .social-icons {
+      float: right;
+    }
+    
+    /* CSS for individual social media icons */
+    .social-icons img {
+      width: 20px;
+      margin-left: 5px;
+    }
 
 
 
