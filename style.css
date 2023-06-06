@@ -10,6 +10,10 @@ background-color:#24292e;
   font-family: "Plus Jakarta Sans", "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
 
 }
+/* adding scroll?*/
+html,body{
+overflow:auto;
+}
 
 .intro-fade-in { 
 
