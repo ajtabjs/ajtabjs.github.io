@@ -25,7 +25,7 @@ overflow-y: scroll;
 
 .intro-fade-in { 
 
-animation: fadeIn 5s; 
+animation: fadeIn 3s; 
 
 }
 
@@ -66,13 +66,14 @@ animation: fadeIn 5s;
   margin-right: auto;
   width: 350;
 }
-#rick-text{
+#rick-text {
 font-size: 1.5vw;
 text-align: center;
 
 }
 
-#title{
+#title {
+ opacity: 0;
 font-size:5vw;
 text-align:center;
 
