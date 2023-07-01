@@ -78,3 +78,21 @@ text-align:center;
 
 }
 
+
+/*thank you w3schools :D
+ 
+ https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition_transform
+ */ 
+#icon {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s, height 2s, transform 2s;
+}
+
+#icon:hover {
+  width: 200px;
+  height: 200px;
+  transform: rotate(180deg);
+}
+
