@@ -3,8 +3,11 @@
   element.classList.add("intro-fade-in");
 }); */
 
+var worldtitle =  document.getElementById("title");
+
 document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("title").classList.add("intro-fade-in");
+  worldtitle.classList.add("intro-fade-in");
+  
 });
 
 //test

@@ -27,6 +27,8 @@ overflow-y: scroll;
 
 animation: fadeIn 3s; 
 
+ animation-fill-mode: forwards;
+
 }
 
 @keyframes fadeIn {
@@ -78,6 +80,11 @@ font-size:5vw;
 text-align:center;
 
 }
+
+.show-text {
+  opacity: 1 !important;
+}
+
 
 
 /*thank you w3schools :D
