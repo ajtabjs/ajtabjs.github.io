@@ -25,7 +25,9 @@ overflow-y: scroll;
 
 .intro-fade-in { 
 
-animation: fadeIn 5s; 
+animation: fadeIn 3s; 
+
+ animation-fill-mode: forwards;
 
 }
 
@@ -66,15 +68,39 @@ animation: fadeIn 5s;
   margin-right: auto;
   width: 350;
 }
-#rick-text{
+#rick-text {
 font-size: 1.5vw;
 text-align: center;
 
 }
 
-#title{
+#title {
+ opacity: 0;
 font-size:5vw;
 text-align:center;
 
+}
+
+.show-text {
+  opacity: 1 !important;
+}
+
+
+
+/*thank you w3schools :D
+ 
+ https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition_transform
+ */ 
+#icon {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s, height 2s, transform 2s;
+}
+
+#icon:hover {
+  width: 200px;
+  height: 200px;
+  transform: rotate(180deg);
 }
 

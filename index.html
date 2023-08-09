@@ -5,31 +5,71 @@
 <meta name="description" content="Our first page">
 <meta name="description" content="My first webpage">
    <link rel="stylesheet" href="style.css">
-     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
+   <link rel="stylesheet" href="bycloud.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet"> 
-  <link rel="icon" type="image/x-icon" href="favicons/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicons/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+  <style>
+    #js-disable-message {
+    display: block;
+  }
+
+  .js-disabled #js-disable-message {
+    display: none;
+  }
+    #scroll-secret {
+    display: none;
+  }
+  </style>
+    <script>
+    // Add the "js-disabled" class to the <html> tag if JavaScript is disabled
+ document.documentElement.classList.add("js-disabled");
+  document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("scroll-secret").style.display = "block";
+  });
+  </script>
+
 </head>
 <body>
+  
 	 <div class="navbar">
     <a href="index.html">Home</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
+    <a href="#credits">Credits</a>
     <div class="social-icons">
       <a href="https://github.com/ajtabjs" target="_blank"><img src="icons/github-mark-white.png" alt="Github"></a>
       <a href="https://postlit.dev/@ajtalksaboutstuff" target="_blank"><img src="icons/postlit-green.png" alt="Postlit"></a>
       <a href="https://discord.com/users/1107427373432963122" target="_blank"><img src="icons/discord.png" alt="Discord"></a>
     </div>
   </div>
+    <noscript>
+    <div id="js-disable-message">
+      <p>Hello!, this site requires JavaScript to use, so if you use something like NoScript, then set this site as trusted.</p>
+      <br>
+      <br>
+      <p>Thank you! :D</p>
+      <br>
+      <br>
+      <p>- AJ</p>
+    </div>
+  </noscript>
     <script src="https://andrewthecoolalias.github.io/blocked/unbed.js"></script>
  <h1 id="title"> Hello World!</h1>
-
+ <br>
+ <hr>
+<div id="scroll-secret">
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
  <p id="rick-text">You have been epicly rickrolled! :D</p>
  <img id="rick" src="https://media.tenor.com/x8v1oNUOmg4AAAAd/rickroll-roll.gif" width="350">
+ </div>
  <script src="main.js"></script>
 </body>
 </html>
