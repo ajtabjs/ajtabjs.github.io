@@ -3,11 +3,11 @@
   element.classList.add("intro-fade-in");
 }); */
 
-var worldtitle =  document.getElementById("title");
+/* var worldtitle =  document.getElementById("title");
 
 document.addEventListener("DOMContentLoaded", function () {
   worldtitle.classList.add("intro-fade-in");
   
-});
+}); */
 
 //test

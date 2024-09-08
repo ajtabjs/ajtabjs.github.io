@@ -1,13 +1,74 @@
+/* stealing gradient background from gtools*/
+/*.gradient-background {
+  background: linear-gradient(232deg,#F5A9B8,rgb(255,163,163),rgb(232,123,255));
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+} */
+
+
+/* Advanced Skiddery. https://codepen.io/kannankumar/pen/qNJaQO */
+.fancy_div {
+        height: 2px;
+        background-color: #E6E6E6;
+        width: 98.0em;
+        margin: 0 auto;
+   }
+
+  
+
+.gradient-background {
+  background: linear-gradient(232deg,#5bcefa,#F5A9B8);
+  background-size: 900% 900%;
+  animation: gradient-animation 16s ease infinite;
+}
+
+
+/* stole a friend's code */
+.section1 {
+   height: 100%;
+ width: 100%;
+ display: flexbox;
+ overflow:hidden;
+}
+.sectionh1text1 {
+   font-size: 60px;
+  padding-top: 60px;
+  padding-left: 50px;
+  display: inline-block;
+}
+.sectionhttptextp {
+ font-size: 20px;
+  padding-left: 50px;
+  display: block;
+margin: -20px 0 10px 200px;
+}
+.gay-image{
+
+  float: left;
+  margin-right: 10px; /* Adds some space between the image and the text */
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  } 100% {
+    background-position: 0% 50%;
+  }
+}
+
+
 
 h1,h2,h3,h4,h5,h6{ /* for all titles */
-    font-family: "Plus Jakarta Sans", "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Plus Jakarta Sans", "Figtree","Montserrat", Verdana, Geneva, Tahoma, sans-serif;
     line-height: 110%;
     color: #f4f4f4;
 }
 
 body {
-background-color:#24292e;
-  font-family: "Plus Jakarta Sans", "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+/* background-color:#24292e; */
+  font-family: "Plus Jakarta Sans", "Figtree", "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
 
 }
 
@@ -36,13 +97,11 @@ animation: fadeIn 3s;
   100% { opacity: 1; }
 }
 
-  /* CSS for the navigation bar */
     .navbar {
-      background-color: #2d3339;
+     /*  background-color: #2d3339; */
       overflow: hidden;
     }
     
-    /* CSS for the navigation links */
     .navbar a {
       float: left;
       color: #f2f2f2;
@@ -51,28 +110,28 @@ animation: fadeIn 3s;
       text-decoration: none;
     }
     
-    /* CSS for the social media icons */
     .social-icons {
       float: right;
     }
     
-    /* CSS for individual social media icons */
+
     .social-icons img {
       width: 20px;
       margin-left: 5px;
     }
 
-#rick{
+ /* #rick{
     display: block;
   margin-left: auto;
   margin-right: auto;
   width: 350;
 }
+
 #rick-text {
 font-size: 1.5vw;
 text-align: center;
 
-}
+} */
 
 #title {
  opacity: 0;
