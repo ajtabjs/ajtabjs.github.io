@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>dev site </title>
+<title>ajtabs</title>
 <meta name="description" content="Our first page">
 <meta name="description" content="My first webpage">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,6 +37,24 @@
     // Add the "js-disabled" class to the <html> tag if JavaScript is disabled
  document.documentElement.classList.add("js-disabled");
   document.addEventListener("DOMContentLoaded", function() {
+  });
+
+   document.addEventListener("DOMContentLoaded", function() {
+    const quotes = [
+      "not that good of a web dev",
+      "learning more every day", 
+      "gay as fuck",
+      "ready to build amazing stuff",
+      "let's make something cool",
+     "something cool",
+     "being alone at the edge of a universe humming a tune"
+    ];
+
+    // Select a random quote from the array
+    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+    // title
+    document.title = `ajtabs | ${randomQuote}`;
   });
   </script>
 
