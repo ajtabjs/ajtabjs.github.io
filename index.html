@@ -2,10 +2,11 @@
 <html>
 <head>
 <title>ajtabs</title>
-<meta name="description" content="Our first page">
-<meta name="description" content="My first webpage">
+<meta name="description" content="gay.">
+<meta name="description" content="Personal webpage made by a bisexual person.">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="style.css">
+  
    <link rel="stylesheet" href="bycloud.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
@@ -16,7 +17,7 @@
  <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+  /> 
     <link rel="icon" type="image/x-icon" href="favicons/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
@@ -47,7 +48,10 @@
       "ready to build amazing stuff",
       "let's make something cool",
      "something cool",
-     "being alone at the edge of a universe humming a tune"
+     "being alone at the edge of a universe humming a tune",
+     "used to be friends with 3kh0",
+     "shoutout to t0p for letting me borrow his code for this",
+     "uiverse.io is a good resource for css styles"
     ];
 
     // Select a random quote from the array
@@ -56,10 +60,20 @@
     // title
     document.title = `ajtabs | ${randomQuote}`;
   });
+
   </script>
 
 </head>
-<body class="gradient-background">
+<!-- Loader -->
+<div id="loader-wrapper">
+    <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<body class="gradient-background" onload="myFunction()">
 	 <div class="navbar">
     <a href="index.html">Home</a>
     <a href="#about">About</a>
@@ -93,6 +107,13 @@
 <div class="section2">
 
 </div>
- <script src="main.js"></script>
+<!-- JQuery Scripts -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    $(window).on('load', function() {
+        $("#loader-wrapper").fadeOut(700);
+    });
+</script>
+<script src="main.js"></script>
 </body>
 </html>
