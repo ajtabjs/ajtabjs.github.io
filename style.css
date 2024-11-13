@@ -164,27 +164,29 @@
 
 /* stole a friend's code, credits to maroni.dev */
 .section1 {
-   height: 100%;
- width: 100%;
- display: flexbox;
- overflow:hidden;
+  height: 100%;
+width: 100%;
+display: flexbox;
+overflow:hidden;
 }
 .sectionh1text1 {
-   font-size: 60rem;
-  padding-top: 60rem;
-  padding-left: 50rem;
-  display: inline-block;
+  font-size: 5rem;
+ padding-top: -5rem;
+ padding-left: 5rem;
+ 
+ display: inline-block;
 }
 .sectionhttptextp {
- font-size: 20rem;
-  padding-left: 50pt;
-  display: block;
-margin: -20px 0 10px 200px;
-}
+font-size: 2rem;
+ padding-left: 50pt;
+ display: block;
+ padding-top: -500px;
+margin: -20px 0 20px 20px; 
+} 
 .gay-image{
 
-  float: left;
-  margin-right: 10pt; /* Adds some space between the image and the text */
+ float: left;
+ margin-right: 10pt; /* Adds some space between the image and the text */
 }
 @keyframes gradient-animation {
   0% {
